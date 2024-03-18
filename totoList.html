@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoList</title>
+	<link rel="stylesheet" href="todo.css">
+	<script type="text/javascript" src="todo.js"></script>
+</head>
+<body>
+    <div class="todo-container">
+        <h1>오늘의 할 일</h1>
+        <div id="inputField">
+            <input type="text" id="todoInput" placeholder="할 일을 입력하세요" onkeydown="keyCodeCheck()">
+            <button type="button" id="addBtn">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul id="todoList">
+
+        </ul>
+        <div class="delete-btn-wrap">
+            <button onclick="deleteAll();">전체 삭제</button>
+        </div>
+    </div>
+</body>
+</html>
+<!-- <body>
+     <ul id = "todo-list">
+        <div class = "todo">
+            <li class="todo-content">내용</li>
+            <button class="complete-button">완료</button>
+            <button class="delete-button">삭제</button>
+
+        </div>
+    </ul> 
+</body>
+</html> -->
