@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todoList</title>
-	<link rel="stylesheet" href="todo.css">
-	<script type="text/javascript" src="todo.js"></script>
+	<link rel="stylesheet" href="todo.css">	
 </head>
 <body>
     <div class="todo-container">
         <h1>오늘의 할 일</h1>
         <div id="inputField">
             <input type="text" id="todoInput" placeholder="할 일을 입력하세요" onkeydown="keyCodeCheck()">
-            <button type="button" id="addBtn">
+            <button type="button" id="addBtn">추가</button>
                 <span></span>
                 <span></span>
             </button>
@@ -25,6 +24,7 @@
             <button onclick="deleteAll();">전체 삭제</button>
         </div>
     </div>
+    <script type="text/javascript" src="todo.js"></script>
 </body>
 </html>
 <!-- <body>

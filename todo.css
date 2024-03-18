@@ -1,4 +1,4 @@
-.todo{
+/* .todo{
     margin: 0.5rem;
     font-size: 1.2rem;
     display: flex;
@@ -23,7 +23,7 @@
     text-decoration: line-through;
     color: #d8d8d8;
     opacity: 0.5;
-}
+} */
 
 * {
     box-sizing: border-box;
@@ -53,7 +53,7 @@ h1 {
 }
 
 #inputField #todoInput {
-    width: calc(100% - 45px);
+    width: calc(100% - 60px);
     border: 1px solid #eee;
     border-radius: 4px;
     padding: 10px;
@@ -65,16 +65,17 @@ h1 {
 
 #inputField #addBtn {
     position: relative;
-    width: 35px;
+    width: 40px;
     height: 35px;
     border: none;
     background-color: #242423;
+    color: #fff;
     border-radius: 4px;
     cursor: pointer;
     vertical-align: middle;
 }
 
-#inputField #addBtn span {
+/* #inputField #addBtn span {
     display: block;
     width: 2px;
     height: 15px;
@@ -83,7 +84,7 @@ h1 {
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-}
+} */
 
 #inputField #addBtn span:last-child {
     transform: translate(-50%,-50%) rotate(-90deg);
@@ -99,6 +100,7 @@ h1 {
 #todoList li {
     padding: 10px 0;
     user-select: none;
+    width: 250px;
 }
 
 #todoList li.complete {
@@ -115,6 +117,24 @@ h1 {
     border-radius: 4px;
     cursor: pointer;
 }
+
+#todoList delButton {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: #6b6b6b;
+    
+    border-radius: 4px;
+    cursor: pointer;
+    vertical-align: right;
+    float: right;
+}
+
+
+#todoList delButton:before, #todoList delButton:after {position: absolute; right: 9px; top:6px; content:''; height: 8px; width:1px; background-color: #222;} 
+#todoList delButton:before {transform: rotate(45deg);} 
+#todoList delButton:after {transform: rotate(-45deg);}
 
 #todoList li.complete button::after {
     content: "";

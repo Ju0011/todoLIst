@@ -7,6 +7,7 @@ console.log(savedTodoList)
 if (savedTodoList) { // 로컬에서 데이터 가져오기
     for(let i = 0; i < savedTodoList.length; i++){
         createTodo(savedTodoList[i])
+        
     }
 }
 
@@ -31,11 +32,14 @@ function createTodo (storageData) { // 할 일 추가 기능
     const todoList = document.querySelector('#todoList');
     const newLi = document.createElement('li');
     const newBtn = document.createElement('button');
+    const newDelBtn = document.createElement('delButton');
     const newSpan = document.createElement('span');
     const deleteAll = document.querySelector('.delete-btn-wrap');
+    const deletOne = document.querySelector('.delete-btn-wrap');
 
     newLi.appendChild(newBtn);
     newLi.appendChild(newSpan);
+    newLi.appendChild(newDelBtn);
 
     newSpan.textContent = todoContents
 
@@ -49,16 +53,23 @@ function createTodo (storageData) { // 할 일 추가 기능
         saveItemsFn();
     });
 
-    newLi.addEventListener('dblclick', () => { // 더블 클릭
+    newDelBtn.addEventListener('click', () => { // 더블 클릭 - 리스트에서 삭제
         newLi.remove();
 
         saveItemsFn();
     });
 
+
     if (storageData && storageData.complete === true) {
         newLi.classList.add('complete')
     }
 
+    saveItemsFn();
+};
+
+function deleteOne() { // 삭제 버튼
+    const liList = document.querySelector('#todoList li');
+    liList[i].remove();
     saveItemsFn();
 };
 
